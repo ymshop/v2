@@ -1,5 +1,5 @@
 <template>
-  <div class="relative z-40 w-full h-16 bg-blue-600">
+  <div class="sticky top-0 z-40 w-full h-16 bg-blue-600">
     <div class="container flex items-center justify-between w-full h-full">
       <!-- logo -->
       <a href="/" class="text-xl text-white">
