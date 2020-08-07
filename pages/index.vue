@@ -10,7 +10,7 @@
       <span class="font-medium">Gamers</span> Yang Ingin
       <span class="font-medium">Top Up</span> Dengan Aman, Cepat Dan Murah
     </p>
-    <div class="grid w-full grid-cols-12 gap-2 pt-5">
+    <div class="grid w-full grid-cols-12 gap-2 pt-5 select-none">
       <n-link
         to="/daftar-harga"
         class="w-full col-span-6 py-3 text-center text-white transition-colors duration-200 bg-blue-600 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
