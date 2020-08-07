@@ -3,7 +3,9 @@
     <div class="flex justify-center w-full h-full">
       <div class="w-full max-w-sm max-h-full min-h-full overflow-y-auto bg-white shadow-xl">
         <Navbar></Navbar>
-        <Nuxt />
+        <div class="container w-full h-full">
+          <Nuxt />
+        </div>
       </div>
     </div>
   </div>
