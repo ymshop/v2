@@ -11,7 +11,9 @@ module.exports = {
       center: true
     }
   },
-  variants: {},
+  variants: {
+    textColor: ["responsive", "hover", "focus", "focus-within"]
+  },
   plugins: [],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
