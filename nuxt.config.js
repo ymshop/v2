@@ -24,7 +24,7 @@ export default {
         content: "Tempat Top Up Game"
       }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
   },
   /*
    ** Global CSS
