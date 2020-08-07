@@ -28,11 +28,11 @@
       class="absolute top-0 w-full transition duration-200 ease-in-out"
       :class="{'invisible opacity-0': !showNavbar, 'visible opacity-100': showNavbar}"
     >
-      <div class="mx-1 mt-2">
+      <div class="mx-1 mt-1">
         <nav class="w-full bg-white rounded shadow">
           <div class="container w-full h-full">
             <!-- head -->
-            <div class="flex items-center justify-between w-full h-12">
+            <div class="flex items-center justify-between w-full h-12 pt-1">
               <!-- logo -->
               <a href="/" class="text-xl text-blue-600">
                 <span class="font-bold">YM</span>SHOP
