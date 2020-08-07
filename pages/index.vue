@@ -10,15 +10,19 @@
       <span class="font-medium">Gamers</span> Yang Ingin
       <span class="font-medium">Top Up</span> Dengan Aman, Cepat Dan Murah
     </p>
-    <div class="flex w-full pt-5 space-x-2">
+    <div class="grid w-full grid-cols-12 gap-2 pt-5">
       <n-link
         to="/daftar-harga"
-        class="w-full py-3 text-center text-white transition-colors duration-200 bg-blue-600 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
+        class="w-full col-span-6 py-3 text-center text-white transition-colors duration-200 bg-blue-600 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
       >Daftar Harga</n-link>
       <n-link
         to="/order"
-        class="w-full py-3 text-center text-blue-600 transition-colors duration-200 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
+        class="w-full col-span-6 py-3 text-center text-blue-600 transition-colors duration-200 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
       >Order</n-link>
+      <n-link
+        to="/jual-akun"
+        class="w-full col-span-12 py-3 text-center text-blue-600 transition-colors duration-200 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
+      >Jual Akun</n-link>
     </div>
   </div>
 </template>
