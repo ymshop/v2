@@ -22,5 +22,8 @@
 <script>
 export default {
   name: "error.layout",
+  mounted() {
+    document.title = "YMSHOP | Halaman Tidak Ditemukan";
+  },
 };
 </script>
