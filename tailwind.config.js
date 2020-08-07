@@ -5,13 +5,13 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
-  theme: {},
-  variants: {
+  theme: {
     container: {
       padding: "1rem",
       center: true
     }
   },
+  variants: {},
   plugins: [],
   purge: {
     // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
