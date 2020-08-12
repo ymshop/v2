@@ -250,8 +250,10 @@ export default {
     },
   },
 
-  mounted() {
-    document.title = "YMSHOP — Order | Tempat Top Up Game Aman dan Cepat";
+  head() {
+    return {
+      title: "YMSHOP — Order | Tempat Top Up Game Aman dan Cepat",
+    };
   },
 
   directives: {
