@@ -165,7 +165,7 @@
           v-for="(admin, nomor, index) in admins"
           :key="index"
           :href="'https://wa.me/?phone=' + nomor + '&text=' + pesan"
-          class="w-full px-4 py-3 text-center text-white bg-blue-600 rounded hover:bg-blue-700"
+          class="w-full px-4 py-3 text-center text-white transition-colors duration-200 bg-blue-600 rounded hover:bg-blue-700"
         >{{admin}}</a>
       </div>
     </div>
@@ -209,13 +209,44 @@ export default {
   computed: {
     pesan() {
       let enter = "%0A";
+      let pesan = "";
+      let satuan = "";
+
+      // satuan beli
+      if (this.form.game == "Arena Of Valor") satuan = "Voucher";
+      if (this.form.game == "Call Of Duty Mobile") satuan = "COD Point";
+      if (this.form.game == "Free Fire") satuan = "Diamond";
+      if (this.form.game == "Mobile Legends: Bang Bang") satuan = "Diamond";
+      if (this.form.game == "PlayerUnknown's Battlegrounds Mobile")
+        satuan = "Unknown Cash";
+
+      // via login
       if (
         this.form.game == "Arena Of Valor" ||
         this.form.game == "Call Of Duty Mobile"
       ) {
-        return `Assalamu'alaikum, Mau *Top Up* nih${enter}${enter}*Nickname*: ${this.form.nickname}${enter}*Game*: ${this.form.game}${enter}*Jumlah Beli*: ${this.form.jumlah}${enter}*Metode Pembayaran*: ${this.form.pembayaran}${enter}${enter}_Top Up Game *${this.form.game}* Dilakukan Via Login, Silahkan Beri Akunnya Kepada Admin_`;
+        pesan += `Assalamu'alaikum, mau *Top Up* nih${enter}`;
+        pesan += `${enter}`;
+        pesan += `*Nickname*: ${this.form.nickname}${enter}`;
+        pesan += `*Game*: ${this.form.game}${enter}`;
+        pesan += `*Jumlah COD Point*: ${this.form.jumlah}${enter}`;
+        pesan += `*Metode Pembayaran*: ${this.form.pembayaran}${enter}`;
+        pesan += `${enter}`;
+        pesan += `_top up game *${this.form.game}* dilakukan via login, jadi berikan akun anda kepada admin yang bersangkutan_`;
+
+        return pesan;
       }
-      return `Assalamu'alaikum, Mau *Top Up* nih${enter}${enter}*Nickname*: ${this.form.nickname}${enter}*Game*: ${this.form.game}${enter}*Jumlah Beli*: ${this.form.jumlah}${enter}*Metode Pembayaran*: ${this.form.pembayaran}${enter}*Akun*: ${this.form.akun}`;
+
+      // via non-login
+      pesan += `Assalamu'alaikum, mau *Top Up* nih${enter}`;
+      pesan += `${enter}`;
+      pesan += `*Nickname*: ${this.form.nickname}${enter}`;
+      pesan += `*Game*: ${this.form.game}${enter}`;
+      pesan += `*Akun*: ${this.form.akun}${enter}`;
+      pesan += `*Jumlah ${satuan}*: ${this.form.jumlah}${enter}`;
+      pesan += `*Metode Pembayaran*: ${this.form.pembayaran}${enter}`;
+
+      return pesan;
     },
   },
 
