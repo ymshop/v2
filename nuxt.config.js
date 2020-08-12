@@ -21,7 +21,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Tempat Top Up Game"
+        content: "Tempat Top Up Game Aman dan Cepat"
       }
     ],
     link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
