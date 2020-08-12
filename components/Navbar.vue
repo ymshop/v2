@@ -68,7 +68,7 @@
                 active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100"
               >Order</n-link>
               <n-link
-                to="/jual-akun"
+                to="/jualakun"
                 class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25"
                 active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100"
               >Jual Akun</n-link>

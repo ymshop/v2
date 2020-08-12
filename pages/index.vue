@@ -20,7 +20,7 @@
         class="w-full col-span-6 py-3 text-center text-blue-600 transition-colors duration-200 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
       >Order</n-link>
       <n-link
-        to="/jual-akun"
+        to="/jualakun"
         class="w-full col-span-12 py-3 text-center text-blue-600 transition-colors duration-200 border border-blue-600 rounded hover:bg-blue-600 hover:text-white"
       >Jual Akun</n-link>
     </div>
