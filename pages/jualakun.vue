@@ -30,7 +30,7 @@
         <div class="relative">
           <select
             id="select"
-            class="block w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded appearance-none focus:outline-none focus:border-blue-600 focus:text-blue-600"
+            class="block w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded appearance-none focus:outline-none focus:border-blue-600 focus:text-blue-600"
             v-model="form.game"
             v-focus
           >
@@ -59,7 +59,7 @@
         <input
           type="text"
           v-model="form.nickname"
-          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
         />
       </label>
@@ -72,7 +72,7 @@
         <input
           type="text"
           v-model="form.level"
-          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
         />
       </label>
@@ -85,7 +85,7 @@
         <input
           type="text"
           v-model="form.harga"
-          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
         />
       </label>
@@ -97,7 +97,7 @@
         Keterangan
         <textarea
           rows="10"
-          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
         ></textarea>
       </label>
