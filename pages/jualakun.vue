@@ -20,7 +20,8 @@
       <span>
         Caranya gampang kok kamu tinggal isi aja data yang ada dibawah dan klik
         tombol
-        <span class="px-2 py-1 text-sm text-white bg-blue-600 rounded"
+        <span
+          class="px-2 py-1 text-sm text-white bg-blue-600 rounded select-none"
           >kirim data</span
         >
       </span>
@@ -109,6 +110,7 @@
         Keterangan
         <textarea
           rows="10"
+          v-model="form.keterangan"
           class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
         ></textarea>
@@ -119,10 +121,21 @@
         Contoh Caption
         <div
           class="w-full px-4 py-2 text-gray-500 bg-transparent border-2 border-gray-300 rounded"
-        >
-          {{ caption }}
-        </div>
+          v-html="caption"
+        ></div>
       </label>
+
+      <!-- pilih admin -->
+      <div class="flex justify-between col-span-12 mt-4 space-x-2 select-none">
+        <a
+          target="_blank"
+          v-for="(admin, nomor, index) in admins"
+          :key="index"
+          :href="'https://wa.me/?phone=' + nomor + '&text=' + pesan"
+          class="w-full px-4 py-3 text-center text-white transition-colors duration-200 bg-blue-600 rounded hover:bg-blue-700 focus:bg-blue-700 focus:outline-none"
+          >{{ admin }}</a
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -153,11 +166,56 @@ export default {
   },
 
   computed: {
-    pesan() {},
-    caption() {
-      let caption;
+    pesan() {
+      let enter = "%0A";
+      let lb = " ㅤㅤㅤㅤㅤㅤ ";
+      let txt = "";
+      let keterangan = this.form.keterangan;
 
-      return caption;
+      txt += `JUAL AKUN ${this.form.game.toUpperCase()}${enter}`;
+      txt += `${lb}${enter}`;
+      txt += `KETERANGAN AKUN${enter}`;
+      txt += `Nickname: ${this.form.nickname}${enter}`;
+      txt += `Level: ${this.form.level}${enter}`;
+      txt += `Harga: ${this.form.harga}${enter}`;
+      txt += `Keterangan: ${enter}${this.form.keterangan.replace(
+        /\n|\r/g,
+        enter
+      )}${enter}`;
+      txt += `${lb}${enter}`;
+      txt += `APABILA ADA KEJADIAN TIPU MENIPU KARENA TIDAK MELAKUKAN REKBER/PULBER DENGAN ADMIN, MAKA ITU DILUAR TANGGUNG JAWAB KAMI.${enter}`;
+      txt += `${lb}${enter}`;
+      txt += `Kontak Admin${enter}`;
+      txt += `WA: 0895328311263${enter}`;
+      txt += `${lb}${enter}`;
+      txt += `Mau jual akun juga? Silahkan hubungi admin dengan kontak diatas.`;
+
+      return txt;
+    },
+    caption() {
+      let enter = "<br />";
+      let txt = "";
+      let keterangan = this.form.keterangan;
+
+      txt += `JUAL AKUN ${this.form.game.toUpperCase()}${enter}`;
+      txt += `${enter}`;
+      txt += `KETERANGAN AKUN${enter}`;
+      txt += `Nickname: ${this.form.nickname}${enter}`;
+      txt += `Level: ${this.form.level}${enter}`;
+      txt += `Harga: ${this.form.harga}${enter}`;
+      txt += `Keterangan: ${enter}${this.form.keterangan.replace(
+        /\n|\r/g,
+        enter
+      )}${enter}`;
+      txt += `${enter}`;
+      txt += `APABILA ADA KEJADIAN TIPU MENIPU KARENA TIDAK MELAKUKAN REKBER/PULBER DENGAN ADMIN, MAKA ITU DILUAR TANGGUNG JAWAB KAMI.${enter}`;
+      txt += `${enter}`;
+      txt += `Kontak Admin${enter}`;
+      txt += `WA: 0895328311263${enter}`;
+      txt += `${enter}`;
+      txt += `Mau jual akun juga? Silahkan hubungi admin dengan kontak diatas.`;
+
+      return txt;
     }
   },
 
