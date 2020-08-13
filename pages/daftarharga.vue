@@ -1,8 +1,8 @@
 <template>
   <div class="w-full my-5 select-text">
-    <div class="grid w-full grid-cols-2 gap-2 mb-3">
+    <div class="grid w-full grid-cols-2 gap-2 mb-3 select-none">
       <button
-        class="px-6 py-3 uppercase transition-colors duration-200 border border-blue-600 rounded focus:outline-none hover:bg-blue-600 hover:text-white"
+        class="px-6 py-3 uppercase transition-colors duration-200 border border-blue-600 rounded focus:outline-none hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white"
         :class="
           harga
             ? 'text-white bg-blue-600'
