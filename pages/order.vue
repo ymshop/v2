@@ -195,8 +195,8 @@ export default {
   computed: {
     pesan() {
       let enter = "%0A";
-      let pesan;
-      let satuan;
+      let pesan = "";
+      let satuan = "";
 
       // satuan beli
       if (this.form.game == "Arena Of Valor") satuan = "Voucher";
