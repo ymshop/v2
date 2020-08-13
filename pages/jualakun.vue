@@ -3,18 +3,17 @@
     <h3
       class="flex flex-col space-y-3 text-lg font-normal leading-relaxed tracking-wide text-center"
     >
-      <span
-        >Kamu pengen jual akun game? Bingung mau posting dimana? Tenang kita
-        punya solusinya.</span
-      >
+      <span>
+        Kamu pengen jual akun game? Bingung mau posting dimana? Tenang kita
+        punya solusinya.
+      </span>
       <span>
         Ayo pakai jasa jual akun dari YMSHOP, akun anda akan kami posting di
         <a
           href="https://instagram.com/ymshop28"
           target="_blank"
           class="font-medium underline transition-colors duration-200 hover:text-blue-600"
-          >Instagram</a
-        >
+        >Instagram</a>
         kami.
       </span>
       <span>
@@ -22,8 +21,7 @@
         tombol
         <span
           class="px-2 py-1 text-sm text-white bg-blue-600 rounded select-none"
-          >kirim data</span
-        >
+        >kirim data</span>
       </span>
     </h3>
 
@@ -41,9 +39,11 @@
             v-model="form.game"
             v-focus
           >
-            <option v-for="(game, index) in games" :key="index">{{
+            <option v-for="(game, index) in games" :key="index">
+              {{
               game
-            }}</option>
+              }}
+            </option>
           </select>
           <div
             id="arrow_select"
@@ -99,9 +99,7 @@
           v-currency="{ currency: 'IDR', locale: 'id' }"
         />
       </label>
-      <span class="col-span-12 mx-2 -mt-2 text-sm text-red-600"
-        >*minimal Rp 250.000,00</span
-      >
+      <span class="col-span-12 mx-2 -mt-2 text-sm text-red-600">*minimal Rp 250.000,00</span>
 
       <!-- keterangan -->
       <label
@@ -133,8 +131,7 @@
           :key="index"
           :href="'https://wa.me/?phone=' + nomor + '&text=' + pesan"
           class="w-full px-4 py-3 text-center text-white transition-colors duration-200 bg-blue-600 rounded hover:bg-blue-700 focus:bg-blue-700 focus:outline-none"
-          >{{ admin }}</a
-        >
+        >{{ admin }}</a>
       </div>
     </div>
   </div>
@@ -150,18 +147,18 @@ export default {
         nickname: "",
         level: "",
         harga: "",
-        keterangan: ""
+        keterangan: "",
       },
       admins: {
-        62895328311263: "Kirim Data"
+        62895328311263: "Kirim Data",
       },
       games: [
         "Arena Of Valor",
         "Call Of Duty Mobile",
         "Free Fire",
         "Mobile Legends: Bang Bang",
-        "PlayerUnknown's Battlegrounds Mobile"
-      ]
+        "PlayerUnknown's Battlegrounds Mobile",
+      ],
     };
   },
 
@@ -182,6 +179,8 @@ export default {
         /\n|\r/g,
         enter
       )}${enter}`;
+      txt += `${lb}${enter}`;
+      txt += `TRANSAKSI WAJIB MENGGUNAKAN JASA REKBER/PULBER YMSHOP UNTUK MENGHINDARI TINDAKAN PENIPUAN${enter}`;
       txt += `${lb}${enter}`;
       txt += `APABILA ADA KEJADIAN TIPU MENIPU KARENA TIDAK MELAKUKAN REKBER/PULBER DENGAN ADMIN, MAKA ITU DILUAR TANGGUNG JAWAB KAMI.${enter}`;
       txt += `${lb}${enter}`;
@@ -208,6 +207,8 @@ export default {
         enter
       )}${enter}`;
       txt += `${enter}`;
+      txt += `TRANSAKSI WAJIB MENGGUNAKAN JASA REKBER/PULBER YMSHOP UNTUK MENGHINDARI TINDAKAN PENIPUAN.${enter}`;
+      txt += `${enter}`;
       txt += `APABILA ADA KEJADIAN TIPU MENIPU KARENA TIDAK MELAKUKAN REKBER/PULBER DENGAN ADMIN, MAKA ITU DILUAR TANGGUNG JAWAB KAMI.${enter}`;
       txt += `${enter}`;
       txt += `Kontak Admin${enter}`;
@@ -216,23 +217,23 @@ export default {
       txt += `Mau jual akun juga? Silahkan hubungi admin dengan kontak diatas.`;
 
       return txt;
-    }
+    },
   },
 
   head() {
     return {
-      title: "YMSHOP — Jual Akun | Tempat Top Up Game Aman dan Cepat"
+      title: "YMSHOP — Jual Akun | Tempat Top Up Game Aman dan Cepat",
     };
   },
 
   directives: {
     focus: {
       // directive definition
-      inserted: function(el) {
+      inserted: function (el) {
         el.focus();
-      }
-    }
-  }
+      },
+    },
+  },
 };
 </script>
 
