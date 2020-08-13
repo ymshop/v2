@@ -3,20 +3,26 @@
     <h3
       class="flex flex-col space-y-3 text-lg font-normal leading-relaxed tracking-wide text-center"
     >
-      <span>Kamu pengen jual akun game? Bingung mau posting dimana? Tenang kita punya solusinya.</span>
+      <span
+        >Kamu pengen jual akun game? Bingung mau posting dimana? Tenang kita
+        punya solusinya.</span
+      >
       <span>
         Ayo pakai jasa jual akun dari YMSHOP, akun anda akan kami posting di
         <a
           href="https://instagram.com/ymshop28"
           target="_blank"
           class="font-medium underline transition-colors duration-200 hover:text-blue-600"
-        >Instagram</a> kami.
+          >Instagram</a
+        >
+        kami.
       </span>
       <span>
-        Caranya gampang kok kamu tinggal isi aja data yang ada dibawah dan klik tombol
-        <span
-          class="px-2 py-1 text-sm text-white bg-blue-600 rounded"
-        >kirim data</span>
+        Caranya gampang kok kamu tinggal isi aja data yang ada dibawah dan klik
+        tombol
+        <span class="px-2 py-1 text-sm text-white bg-blue-600 rounded"
+          >kirim data</span
+        >
       </span>
     </h3>
 
@@ -34,7 +40,9 @@
             v-model="form.game"
             v-focus
           >
-            <option v-for="(game, index) in games" :key="index">{{ game }}</option>
+            <option v-for="(game, index) in games" :key="index">{{
+              game
+            }}</option>
           </select>
           <div
             id="arrow_select"
@@ -87,8 +95,12 @@
           v-model="form.harga"
           class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
+          v-currency="{ currency: 'IDR', locale: 'id' }"
         />
       </label>
+      <span class="col-span-12 mx-2 -mt-2 text-sm text-red-600"
+        >*minimal Rp 250.000,00</span
+      >
 
       <!-- keterangan -->
       <label
@@ -115,38 +127,39 @@ export default {
         nickname: "",
         level: "",
         harga: "",
-        keterangan: "",
+        keterangan: ""
       },
       admins: {
-        62895328311263: "Kirim Data",
+        62895328311263: "Kirim Data"
       },
       games: [
         "Arena Of Valor",
         "Call Of Duty Mobile",
         "Free Fire",
         "Mobile Legends: Bang Bang",
-        "PlayerUnknown's Battlegrounds Mobile",
-      ],
+        "PlayerUnknown's Battlegrounds Mobile"
+      ]
     };
   },
 
   computed: {
-    pesan() {},
+    pesan() {}
   },
 
   head() {
     return {
-      title: "YMSHOP — Jual Akun | Tempat Top Up Game Aman dan Cepat",
+      title: "YMSHOP — Jual Akun | Tempat Top Up Game Aman dan Cepat"
     };
   },
+
   directives: {
     focus: {
       // directive definition
-      inserted: function (el) {
+      inserted: function(el) {
         el.focus();
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 
