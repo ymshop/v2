@@ -17,7 +17,7 @@
         <input
           type="text"
           v-model="form.nickname"
-          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+          class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
           autocomplete="off"
           v-focus
         />
@@ -31,7 +31,7 @@
         <div class="relative">
           <select
             id="select"
-            class="block w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded appearance-none focus:outline-none focus:border-blue-600 focus:text-blue-600"
+            class="block w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded appearance-none focus:outline-none focus:border-blue-600 focus:text-blue-600"
             v-model="form.game"
           >
             <option v-for="(game, index) in games" :key="index">{{ game }}</option>
@@ -70,61 +70,27 @@
           <input
             type="text"
             v-model="form.akun"
-            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
             autocomplete="off"
           />
         </label>
       </template>
 
       <!-- jumlah top up -->
-      <template v-if="form.game == 'Arena Of Valor'">
+      <template v-if="form.game != ''">
         <label
           class="col-span-12 text-gray-700 transition-colors duration-200 focus-within:text-blue-600"
         >
-          Jumlah Voucher
+          Jumlah
+          <span v-if="form.game == 'Arena Of Valor'">Voucher</span>
+          <span v-if="form.game == 'Call Of Duty Mobile'">COD Point</span>
+          <span v-if="form.game == 'Free Fire'">Diamond</span>
+          <span v-if="form.game == 'Mobile Legends: Bang Bang'">Diamond</span>
+          <span v-if="form.game == 'PlayerUnknown\'s Battlegrounds Mobile'">Unknown Cash</span>
           <input
             type="text"
             v-model="form.jumlah"
-            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
-            autocomplete="off"
-          />
-        </label>
-      </template>
-      <template v-if="form.game == 'Call Of Duty Mobile'">
-        <label
-          class="col-span-12 text-gray-700 transition-colors duration-200 focus-within:text-blue-600"
-        >
-          Jumlah COD Point
-          <input
-            type="text"
-            v-model="form.jumlah"
-            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
-            autocomplete="off"
-          />
-        </label>
-      </template>
-      <template v-if="form.game == 'Free Fire' || form.game == 'Mobile Legends: Bang Bang'">
-        <label
-          class="col-span-12 text-gray-700 transition-colors duration-200 focus-within:text-blue-600"
-        >
-          Jumlah Diamond
-          <input
-            type="text"
-            v-model="form.jumlah"
-            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
-            autocomplete="off"
-          />
-        </label>
-      </template>
-      <template v-if="form.game == 'PlayerUnknown\'s Battlegrounds Mobile'">
-        <label
-          class="col-span-12 text-gray-700 transition-colors duration-200 focus-within:text-blue-600"
-        >
-          Jumlah Unknown Cash
-          <input
-            type="text"
-            v-model="form.jumlah"
-            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
+            class="w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded focus:text-blue-600 focus:outline-none focus:border-blue-600"
             autocomplete="off"
           />
         </label>
@@ -138,7 +104,7 @@
         <div class="relative">
           <select
             id="select"
-            class="block w-full px-4 py-2 text-gray-500 transition-colors duration-200 border-2 border-gray-300 rounded appearance-none focus:outline-none focus:border-blue-600 focus:text-blue-600"
+            class="block w-full px-4 py-2 text-gray-500 transition-colors duration-200 bg-transparent border-2 border-gray-300 rounded appearance-none focus:outline-none focus:border-blue-600 focus:text-blue-600"
             v-model="form.pembayaran"
           >
             <option v-for="(pembayaran, index) in metode" :key="index">{{ pembayaran }}</option>
@@ -165,7 +131,7 @@
           v-for="(admin, nomor, index) in admins"
           :key="index"
           :href="'https://wa.me/?phone=' + nomor + '&text=' + pesan"
-          class="w-full px-4 py-3 text-center text-white transition-colors duration-200 bg-blue-600 rounded hover:bg-blue-700"
+          class="w-full px-4 py-3 text-center text-white transition-colors duration-200 bg-blue-600 rounded hover:bg-blue-700 focus:bg-blue-700 focus:outline-none"
         >{{admin}}</a>
       </div>
     </div>
