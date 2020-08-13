@@ -21,7 +21,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Tempat Top Up Game Aman dan Cepat"
+        content:
+          "YMSHOP adalah tempat top up game online yang sudah berdiri sejak 2017 hingga sekarang."
       }
     ],
     link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }]
