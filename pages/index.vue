@@ -12,7 +12,7 @@
     </p>
     <div class="grid w-full grid-cols-12 gap-2 pt-5 select-none">
       <n-link
-        to="/daftar-harga"
+        to="/daftarharga"
         class="w-full col-span-6 py-3 text-center text-white transition-colors duration-200 bg-blue-600 border border-blue-600 rounded hover:bg-blue-600 hover:text-white focus:outline-none focus:bg-blue-600 focus:text-white"
         >Daftar Harga</n-link
       >
