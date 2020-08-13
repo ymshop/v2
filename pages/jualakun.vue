@@ -113,6 +113,16 @@
           autocomplete="off"
         ></textarea>
       </label>
+
+      <!-- caption -->
+      <label class="col-span-12 mt-3 text-gray-700">
+        Contoh Caption
+        <div
+          class="w-full px-4 py-2 text-gray-500 bg-transparent border-2 border-gray-300 rounded"
+        >
+          {{ caption }}
+        </div>
+      </label>
     </div>
   </div>
 </template>
@@ -143,7 +153,12 @@ export default {
   },
 
   computed: {
-    pesan() {}
+    pesan() {},
+    caption() {
+      let caption;
+
+      return caption;
+    }
   },
 
   head() {

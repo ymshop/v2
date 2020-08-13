@@ -26,7 +26,10 @@
     <!-- menu -->
     <div
       class="absolute top-0 w-full transition duration-200 ease-in-out"
-      :class="{'invisible opacity-0': !showNavbar, 'visible opacity-100': showNavbar}"
+      :class="{
+        'invisible opacity-0': !showNavbar,
+        'visible opacity-100': showNavbar
+      }"
     >
       <div class="mx-1 mt-1">
         <nav class="w-full bg-white rounded shadow">
@@ -61,17 +64,20 @@
                 to="/daftar-harga"
                 class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25 focus:outline-none focus:bg-gray-300 focus:bg-opacity-25"
                 active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100 focus:bg-blue-600 focus:bg-opacity-100"
-              >Daftar Harga</n-link>
+                >Daftar Harga</n-link
+              >
               <n-link
                 to="/order"
                 class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25 focus:outline-none focus:bg-gray-300 focus:bg-opacity-25"
                 active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100 focus:bg-blue-600 focus:bg-opacity-100"
-              >Order</n-link>
+                >Order</n-link
+              >
               <n-link
                 to="/jualakun"
                 class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25 focus:outline-none focus:bg-gray-300 focus:bg-opacity-25"
                 active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100 focus:bg-blue-600 focus:bg-opacity-100"
-              >Jual Akun</n-link>
+                >Jual Akun</n-link
+              >
             </div>
           </div>
         </nav>
@@ -85,8 +91,8 @@ export default {
   name: "navbar.component",
   data() {
     return {
-      showNavbar: false,
+      showNavbar: false
     };
-  },
+  }
 };
 </script>
