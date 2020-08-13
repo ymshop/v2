@@ -2,7 +2,7 @@
   <div class="sticky top-0 z-40 w-full h-16 bg-blue-600">
     <div class="container flex items-center justify-between w-full h-full">
       <!-- logo -->
-      <a href="/" class="text-xl text-white">
+      <a href="/" class="text-xl text-white focus:outline-none">
         <span class="font-bold">YM</span>SHOP
       </a>
 
@@ -34,7 +34,7 @@
             <!-- head -->
             <div class="flex items-center justify-between w-full h-12 pt-1">
               <!-- logo -->
-              <a href="/" class="text-xl text-blue-600">
+              <a href="/" class="text-xl text-blue-600 focus:outline-none">
                 <span class="font-bold">YM</span>SHOP
               </a>
 
@@ -59,18 +59,18 @@
             <div class="flex flex-col w-full pt-3 pb-5 space-y-1">
               <n-link
                 to="/daftar-harga"
-                class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25"
-                active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100"
+                class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25 focus:outline-none focus:bg-gray-300 focus:bg-opacity-25"
+                active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100 focus:bg-blue-600 focus:bg-opacity-100"
               >Daftar Harga</n-link>
               <n-link
                 to="/order"
-                class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25"
-                active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100"
+                class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25 focus:outline-none focus:bg-gray-300 focus:bg-opacity-25"
+                active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100 focus:bg-blue-600 focus:bg-opacity-100"
               >Order</n-link>
               <n-link
                 to="/jualakun"
-                class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25"
-                active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100"
+                class="px-4 py-2 transition-colors duration-200 rounded hover:bg-gray-300 hover:bg-opacity-25 focus:outline-none focus:bg-gray-300 focus:bg-opacity-25"
+                active-class="text-white bg-blue-600 hover:bg-blue-600 hover:text-white hover:bg-opacity-100 focus:bg-blue-600 focus:bg-opacity-100"
               >Jual Akun</n-link>
             </div>
           </div>
