@@ -9,9 +9,7 @@
             : 'text-blue-600 bg-transparent focus:bg-blue-600 focus:text-white'
         "
         @click="harga = true"
-      >
-        Harga Normal
-      </button>
+      >Harga Normal</button>
       <button
         class="px-6 py-3 uppercase transition-colors duration-200 border border-blue-600 rounded focus:outline-none hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white"
         :class="
@@ -20,9 +18,7 @@
             : 'text-blue-600 bg-transparent focus:bg-blue-600 focus:text-white'
         "
         @click="harga = false"
-      >
-        Harga Pulsa
-      </button>
+      >Harga Pulsa</button>
     </div>
     <div class="grid w-full grid-cols-12 gap-2">
       <template v-if="harga">
@@ -74,18 +70,18 @@ import VLazyImage from "v-lazy-image";
 export default {
   name: "daftar-harga.page",
   components: {
-    VLazyImage
+    VLazyImage,
   },
   data() {
     return {
-      harga: true
+      harga: true,
     };
   },
   head() {
     return {
-      title: "YMSHOP — Daftar Harga | Tempat Top Up Game Aman dan Cepat"
+      title: "YMSHOP — Daftar Harga | Tempat Top Up Game Aman dan Cepat",
     };
-  }
+  },
 };
 </script>
 
