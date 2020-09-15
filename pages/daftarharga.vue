@@ -59,6 +59,11 @@
           src="https://raw.githubusercontent.com/ymshop/v2/master/assets/img/pulsa/ml.png"
           src-placeholder="https://raw.githubusercontent.com/ymshop/v2/master/assets/img/pulsa/ml-load.png"
         />
+        <v-lazy-image
+          class="w-full col-span-12 rounded shadow-lg"
+          src="https://raw.githubusercontent.com/ymshop/v2/master/assets/img/pulsa/pubgm.png"
+          src-placeholder="https://raw.githubusercontent.com/ymshop/v2/master/assets/img/pulsa/pubgm-load.png"
+        />
       </template>
     </div>
   </div>
