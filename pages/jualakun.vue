@@ -150,7 +150,7 @@ export default {
         keterangan: "",
       },
       admins: {
-        62895328311263: "Kirim Data",
+        6285210031615: "Kirim Data",
       },
       games: [
         "Arena Of Valor",
@@ -185,7 +185,7 @@ export default {
       txt += `APABILA ADA KEJADIAN TIPU MENIPU KARENA TIDAK MELAKUKAN REKBER/PULBER DENGAN ADMIN, MAKA ITU DILUAR TANGGUNG JAWAB KAMI.${enter}`;
       txt += `${lb}${enter}`;
       txt += `Kontak Admin${enter}`;
-      txt += `WA: 0895328311263${enter}`;
+      txt += `WA: 085210031615{enter}`;
       txt += `${lb}${enter}`;
       txt += `Mau jual akun juga? Silahkan hubungi admin dengan kontak diatas.`;
 
@@ -212,7 +212,7 @@ export default {
       txt += `APABILA ADA KEJADIAN TIPU MENIPU KARENA TIDAK MELAKUKAN REKBER/PULBER DENGAN ADMIN, MAKA ITU DILUAR TANGGUNG JAWAB KAMI.${enter}`;
       txt += `${enter}`;
       txt += `Kontak Admin${enter}`;
-      txt += `WA: 0895328311263${enter}`;
+      txt += `WA: 085210031615{enter}`;
       txt += `${enter}`;
       txt += `Mau jual akun juga? Silahkan hubungi admin dengan kontak diatas.`;
 
